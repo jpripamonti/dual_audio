@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="1">
+    <title>Dual Audio</title>
+    <organization>com.dualaudio</organization>
+    <domains enable_localSystem="true"/>
+    <options customize="never" rootVolumeOnly="true"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="com.dualaudio.DualAudio"/>
+            <line choice="com.dualaudio.DualAudioDriver"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.dualaudio.DualAudio" visible="false">
+        <pkg-ref id="com.dualaudio.DualAudio"/>
+    </choice>
+    <choice id="com.dualaudio.DualAudioDriver" visible="false">
+        <pkg-ref id="com.dualaudio.DualAudioDriver"/>
+    </choice>
+    <pkg-ref id="com.dualaudio.DualAudio" version="1.0" onConclusion="none">app.pkg</pkg-ref>
+    <pkg-ref id="com.dualaudio.DualAudioDriver" version="1.0" onConclusion="none">driver.pkg</pkg-ref>
+</installer-gui-script>
